@@ -1,1 +1,0 @@
-var n=document.querySelector(".main-nav"),t=n.querySelector(".burger-button"),e=n.querySelector(".main-nav__site-nav"),s=()=>{e.classList.toggle("main-nav__site-nav--opened"),t.classList.toggle("burger-button--opened"),e.classList.contains("main-nav__site-nav--opened")&&(e.style.top=`${n.parentElement.clientHeight}px`)};t.addEventListener("click",s);
