@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  flex-shrink: 0;
+
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}

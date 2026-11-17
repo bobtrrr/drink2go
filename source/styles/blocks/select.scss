@@ -1,0 +1,70 @@
+.select {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    z-index: 50;
+
+    width: 10px;
+    height: 10px;
+    content: "";
+
+    background-color: $icon-bg-color-primary;
+    mask-image: url("./../../icons/icon-arrow.svg");
+    mask-repeat: no-repeat;
+    transform: rotate(-90deg);
+
+    transition: transform 0.3s ease;
+  }
+
+  &:has(.select__list:open) {
+    &::before {
+      transform: rotate(-270deg);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.select__list {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 4px 10px;
+  padding-right: 27px;
+  padding-left: 11px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: $text-color-secondary;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $button-bg-color-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 9px;
+  }
+}
+
+.select__option {
+  background-color: $button-bg-color-accent;
+}

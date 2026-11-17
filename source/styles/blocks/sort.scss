@@ -1,0 +1,29 @@
+.sort {
+  display: grid;
+  grid-template-columns: 1fr 163px;
+  column-gap: 8px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 165px;
+    column-gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 12px;
+  }
+}
+
+.sort__caption {
+  margin: 0;
+  margin-left: 2px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  word-break: break-word;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}

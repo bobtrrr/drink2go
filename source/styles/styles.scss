@@ -1,7 +1,42 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/container.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/slider-button.scss";
+@import "./blocks/toggle-button.scss";
+@import "./blocks/radio-control.scss";
+@import "./blocks/toggle-control.scss";
+@import "./blocks/select.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/title.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/social.scss";
+@import "./blocks/site-nav.scss";
+@import "./blocks/user-nav.scss";
+@import "./blocks/burger-button.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/service-nav.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/page-header.scss";
+/* Slider */
+@import "./blocks/toggle-list.scss";
+@import "./blocks/slide.scss";
+@import "./blocks/slider.scss";
+/* Features */
+@import "./blocks/headline.scss";
+@import "./blocks/features.scss";
+/* Catalog */
+@import "./blocks/product-preview.scss";
+@import "./blocks/product-list.scss";
+@import "./blocks/filter-range.scss";
+@import "./blocks/filters-form.scss";
+@import "./blocks/sort.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/map.scss";
+@import "./blocks/page.scss";

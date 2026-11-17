@@ -1,0 +1,26 @@
+.headline {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  justify-items: center;
+
+  &--align-start {
+    justify-items: start;
+  }
+}
+
+.headline__badge {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+}
+
+.headline__title {
+  text-align: center;
+}

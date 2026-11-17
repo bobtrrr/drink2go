@@ -1,1 +1,51 @@
-/* здесь используйте глобальные переменные */
+/* SCREEN */
+$mobile-width: 320px;
+$tablet-width:  768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
+
+/* FONTS */
+$font-family: "Montserrat", "Arial", sans-serif;
+
+/* TEXT */
+$text-color-primary: #333333;
+$text-color-secondary: #7859cf;
+$text-color-secondary-darker: #593cac;
+$text-color-secondary-lighter: #9070ec;
+$text-color-accent: #ffffff;
+$text-color-muted: #bdbdbd;
+
+/* BG */
+$bg-color-accent: #ffffff;
+$bg-color-secondary: #f8f8f8;
+$bg-color-alt: #f0ebff;
+$bg-color-alt-opacity:  rgb(120 89 207 / 25%);
+
+/* BORDER */
+$border-color-primary: #7859cf;
+$border-color-primary-lighter: #9070ec;
+$border-color-primary-darker: #593cac;
+$border-color-secondary: #f0ebff;
+$border-color-muted:  #bdbdbd;
+$border-color-muted-lighter: #e2e2e2;
+
+/* ICON */
+$icon-bg-color: #333333;
+$icon-bg-color-primary: #7859cf;
+$icon-bg-color-primary-darker: #593cac;
+$icon-bg-color-primary-opacity:  rgb(120 89 207 / 25%);
+$icon-bg-color-accent: #ffffff;
+$icon-bg-color-secondary: #f0ebff;
+$icon-bg-color-muted: #bdbdbd;
+$icon-bg-color-hovered: #7859cf;
+
+/* BUTTON */
+$button-bg-color-base: #7859cf;
+$button-bg-color-base-lighter: #9070ec;
+$button-bg-color-base-darker: #593cac;
+$button-bg-color-base-opacity:  rgb(120 89 207 / 25%);
+$button-bg-color-secondary: #f0ebff;
+$button-bg-color-accent: #ffffff;
+$button-bg-color-disabled: #bdbdbd;
+$button-bg-color-disabled-lighter: #e2e2e2;
+$button-bg-color-disabled-lighest: #f8f8f8;

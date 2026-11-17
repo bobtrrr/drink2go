@@ -1,0 +1,26 @@
+.toggle-button {
+  display: block;
+  width: 62px;
+  height: 4px;
+  padding: 0;
+
+  background-color: $bg-color-accent;
+  border: none;
+
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:not(.toggle-button--active):hover,
+  &:not(.toggle-button--active):focus-visible {
+    background-color: $button-bg-color-base-opacity;
+  }
+
+  &:active {
+    background-color: $button-bg-color-base;
+  }
+}
+
+.toggle-button--active {
+  background-color: $button-bg-color-base;
+  pointer-events: none;
+}
