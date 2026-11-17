@@ -1,0 +1,35 @@
+.burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 55px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    background-color: $icon-bg-color-secondary;
+  }
+}
+
+.burger-button__line {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.57s ease-in-out, opacity 1s ease-in-out;
+}
+
+.burger-button--opened .burger-button__line:nth-child(1) {
+  transform: translateY(5.25px) rotate(45deg);
+}
+
+.burger-button--opened .burger-button__line:nth-child(2) {
+  opacity: 0%;
+  transform: rotate(135deg);
+}
+
+.burger-button--opened .burger-button__line:nth-child(3) {
+  transform: translateY(-5.25px) rotate(135deg);
+}

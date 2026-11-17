@@ -1,0 +1,145 @@
+.site-nav {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
+  }
+}
+
+.site-nav__item {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    &::before {
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      z-index: -1;
+
+      width: 100vw;
+      height: 99%;
+      content: "";
+
+      background-color: $bg-color-accent;
+
+      border-bottom: 1px solid $border-color-secondary;
+
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(1) {
+      &::after {
+
+        position: absolute;
+        top: -1px;
+        left: 50%;
+
+        z-index: -1;
+
+        width: 100vw;
+        height: 1px;
+        content: "";
+
+        border-bottom: 1px solid $border-color-secondary;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding: 20px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $text-color-secondary;
+  }
+
+  &:active {
+    color: $text-color-secondary;
+    background-color: $button-bg-color-secondary;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &:active {
+      color: $text-color-primary;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 31px;
+  }
+}
+
+/* PPX START */
+@media (max-width: $mobile-width-only) {
+  .site-nav__item:nth-child(1) .site-nav__link {
+    padding-top: 22px;
+  }
+
+  .site-nav__item:nth-child(2) .site-nav__link {
+    padding-top: 21px;
+  }
+
+  .site-nav__item:nth-child(3) .site-nav__link {
+    padding-top: 21px;
+  }
+
+  .site-nav__item:nth-child(4) .site-nav__link {
+    padding-top: 21px;
+  }
+}
+/* PPX END */
+
+.site-nav__link--active {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    color: $text-color-secondary;
+    cursor: default;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: $text-color-secondary;
+      background-color: transparent;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+
+      height: 2px;
+      content: "";
+
+      background-color: $border-color-primary;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.page__body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows:
+    min-content
+    1fr
+    min-content;
+
+  min-width: $mobile-width;
+
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 143%;
+  color: $text-color-primary;
+}
+
+.page__header {
+  grid-area: header;
+}
+
+.page__content {
+  grid-area: content;
+}
+
+.page__footer {
+  grid-area: footer;
+}

@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 133%;
+  text-decoration: none;
+  color: $text-color-muted;
+
+  transition: color 0.3s ease, fill 0.3s ease;
+
+  fill: $icon-bg-color-muted;
+
+  &:hover,
+  &:focus-visible {
+    color: $text-color-secondary;
+
+    fill: $icon-bg-color-primary;
+  }
+
+  &:active {
+    color: $text-color-secondary-darker;
+
+    fill: $icon-bg-color-primary-darker;
+  }
+}
+
+.copyright__icon {
+  flex-shrink: 0;
+}

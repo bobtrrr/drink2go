@@ -1,0 +1,61 @@
+.slider-button {
+  --icon-direction: 90deg;
+
+  position: relative;
+
+  display: block;
+
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $icon-bg-color-primary;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+
+    background-image: linear-gradient(var(--icon-direction), #ffffff 0%, rgb(255 255 255 / 0%) 100%);
+
+    opacity: 0%;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      opacity: 100%;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-image: linear-gradient(var(--icon-direction), rgb(120 89 207 / 25%) 0%, rgb(120 89 207 / 0%) 100%);
+    }
+  }
+
+  &:disabled {
+    color: $icon-bg-color-muted;
+
+    background-image: none;
+    pointer-events: none;
+  }
+}
+
+.slider-button__icon {
+  transform: translateY(2px);
+}
+
+.slider-button--next {
+  --icon-direction: -90deg;
+}
+
+.slider-button--next .slider-button__icon {
+  transform: rotate(180deg) translateY(-2px);
+}

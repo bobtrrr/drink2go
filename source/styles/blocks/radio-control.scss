@@ -1,0 +1,88 @@
+.radio-control {
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  &:has(:disabled) {
+    color: $text-color-muted;
+
+    cursor: not-allowed;
+  }
+}
+
+.radio-control__input {
+  position: relative;
+
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  margin-top: -1px;
+
+  background-color: $button-bg-color-accent;
+
+  border-radius: 100%;
+  outline: 2px solid $button-bg-color-disabled;
+  outline-offset: -2px;
+  appearance: none;
+
+  transition: outline-color 0.3s ease, background-color 0.3s ease;
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: 16px;
+    height: 16px;
+    content: "";
+
+    background-color: $button-bg-color-accent;
+    border-radius: 100%;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline-color: $button-bg-color-base-lighter;
+
+    &::before {
+      background-color: $button-bg-color-base-opacity;
+    }
+  }
+
+  &:checked {
+    outline-color: $button-bg-color-base;
+
+    &::before {
+      background-color: $button-bg-color-base;
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+    outline-color: $button-bg-color-disabled-lighter;
+
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  &:checked:disabled {
+    outline-color: $button-bg-color-disabled-lighter;
+
+    &::before {
+      background-color: $button-bg-color-disabled-lighter;
+    }
+  }
+}
+
+.radio-control__label {
+  font-size: 16px;
+  line-height: 150%;
+}

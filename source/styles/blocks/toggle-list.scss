@@ -1,0 +1,15 @@
+.toggle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.toggle-list__item {
+  flex-shrink: 0;
+}
